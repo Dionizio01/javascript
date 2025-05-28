@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex011</title>
+</head>
+<body>
+    <h1>EX011</h1>
+    <p>Você é de que país? <input type="text" name="nacionalidade" id="nacionalidade"></p>
+    <input type="button" value="verificar" onclick="verificar()">
+    <div id="resposta">
+
+    </div>
+
+    <script>
+        function verificar() {
+            var pais = document.querySelector('input#nacionalidade')
+            pais = (pais.value)
+            var res = document.getElementById('resposta')
+            if (pais == 'Brasil') {
+                res.innerHTML = `Que legal você é brasileiro!`
+            } else {
+                res.innerHTML = `Afs você não é brasileiro.`
+            }
+        }
+    </script>
+</body>
+</html>
